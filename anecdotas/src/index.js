@@ -53,15 +53,33 @@ const App = (props) => {
 
   return (
     <div>
-      <h1>Anecdote of the day</h1>
-      {props.anecdotes[selected]}
+      <h1 style={{
+          fontSize: 40,
+          fontWeight: 900
+        }}>Anecdote of the day</h1>
       
+      
+          <h2>{props.anecdotes[selected] }</h2>
           <br/>
-          has {votaciones[selected]} votes
+          <h3> has {votaciones[selected]} votes </h3>
           <hr/>
           <br/>
-          <button onClick={Voto}>Vote</button>
-          <button onClick={Siguiente}>Next Anecdote</button>
+          <button style={{
+          padding: "10px 20px",
+          border: "none",
+          borderRadius: "4px",
+          background: "#4a430b",
+          color: "#ffffff",
+          fontSize: 14
+        }} onClick={Voto}>Vote</button>
+          <button style={{
+          padding: "10px 20px",
+          border: "none",
+          borderRadius: "4px",
+          background: "#4a430b",
+          color: "#ffffff",
+          fontSize: 14
+        }} onClick={Siguiente}>Next Anecdote</button>
           <br/>
           {
               (aceptacion>=0) ?
